@@ -1,11 +1,15 @@
 export type Contact = {
-    Id: string
-    Name: string
-    MobilePhone: string
-    JobTitle: string
-    BirthDate: string
+    id: string
+    name: string
+    mobilePhone: string
+    jobTitle: string
+    birthDate: string
 }
 
 export const defaultContact: Contact = {
-    BirthDate: "BirthDate", Id: "", JobTitle: "JobTitle", MobilePhone: "MobilePhone", Name: "Name"
+    birthDate: "BirthDate", id: "", jobTitle: "JobTitle", mobilePhone: "MobilePhone", name: "Name"
+}
+
+export interface IContactsResponse {
+    data: Contact[]
 }
