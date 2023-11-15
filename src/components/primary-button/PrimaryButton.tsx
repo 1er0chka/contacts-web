@@ -1,4 +1,5 @@
 import React, {FunctionComponent} from 'react';
+import styles from './PrimaryButton.module.sass'
 
 interface IPrimaryButtonProps {
     text: string
@@ -7,7 +8,7 @@ interface IPrimaryButtonProps {
 
 const PrimaryButton: FunctionComponent<IPrimaryButtonProps> = ({text, action}) => {
     return (
-        <div onClick={action}>
+        <div className={styles.button} onClick={action}>
             {text}
         </div>
     );

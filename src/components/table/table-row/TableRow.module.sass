@@ -1,0 +1,35 @@
+@import "src/styles/fonts"
+
+.tableRow
+  @include text
+  border-top: solid 0.2vw #f0f4f7
+
+  td
+    padding: 0 1vw 0 1vw
+
+    &:first-child
+      width: 30%
+
+    &:nth-child(2)
+      width: 20%
+
+    &:nth-child(3)
+      width: 20%
+      text-align: center
+
+    &:nth-child(4)
+      width: 20%
+      text-align: center
+
+    &:last-child
+      width: 5%
+      text-align: center
+
+      &:hover
+        cursor: pointer
+
+//TODO: media
+.imageOther
+  img
+    width: 100%
+    height: 100%

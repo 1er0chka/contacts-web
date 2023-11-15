@@ -1,13 +1,16 @@
-import React from 'react';
+import React from 'react'
+import styles from './TableHeader.module.sass'
 
 const TableHeader = () => {
+    // TODO sort
+
     return (
-        <thead>
+        <thead className={styles.tableHeader}>
         <tr>
-            <th>Name</th>
-            <th>Job Title</th>
-            <th>Mobile Phone</th>
-            <th>Birth Date</th>
+            <th>NAME</th>
+            <th>JOB TITLE</th>
+            <th>MOBILE PHONE</th>
+            <th>BIRTH DATE</th>
             <th></th>
         </tr>
         </thead>

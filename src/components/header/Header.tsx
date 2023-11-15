@@ -1,23 +1,14 @@
 import React from 'react';
 import PrimaryButton from "../primary-button/PrimaryButton";
+import styles from './Header.module.sass'
 
 const Header = () => {
     return (
-        <div>
-            <div>Contact List</div>
-            <PrimaryButton text={"Add Contact"} action={console.log}/>
+        <div className={styles.header}>
+            <div className={styles.title}>Contact List</div>
+            <PrimaryButton text={"ADD CONTACT"} action={console.log}/>
         </div>
     );
 };
 
 export default Header;
-
-/*
-*
-* created project
-- added Service
-- added Router
-- added pages (404, contacts)
-- edited configuration
-*
-* */
