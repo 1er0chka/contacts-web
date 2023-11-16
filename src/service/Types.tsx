@@ -13,3 +13,7 @@ export const defaultContact: Contact = {
 export interface IContactsResponse {
     data: Contact[]
 }
+
+export interface IResponse {
+    message: string
+}

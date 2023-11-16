@@ -3,12 +3,12 @@ import TableHeader from "./table-header/TableHeader"
 import {Contact} from "../../service/Types"
 import TableRow from "./table-row/TableRow"
 import styles from './Table.module.sass'
-import ContextMenu from "../context-menu/ContextMenu";
+
 interface ITableProps {
     data: Contact[]
 }
 
-const Table:FunctionComponent<ITableProps> = ({data}) => {
+const Table: FunctionComponent<ITableProps> = ({data}) => {
     return (
         <table className={styles.table}>
             <TableHeader/>
@@ -17,9 +17,8 @@ const Table:FunctionComponent<ITableProps> = ({data}) => {
                 data.map((object: Contact) => <TableRow content={object} key={object.id}/>)
             }
             </tbody>
-            <ContextMenu/>
         </table>
-    );
-};
+    )
+}
 
-export default Table;
+export default Table

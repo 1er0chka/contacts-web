@@ -1,7 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Router from "./service/Router";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Router from "./service/Router"
 import './index.css'
+import {ContextMenuProvider} from "./provider/ContextMenuContext"
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -9,6 +10,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <Router/>
+        <ContextMenuProvider>
+            <Router/>
+        </ContextMenuProvider>
     </React.StrictMode>
 );

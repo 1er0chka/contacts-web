@@ -1,15 +1,16 @@
-import React, {FunctionComponent, useContext} from 'react';
-import {Contact} from "../../../service/Types";
+import React, {FunctionComponent, useContext} from 'react'
+import {Contact} from "../../../service/Types"
 import styles from './TableRow.module.sass'
-import {ContextMenuContext} from "../../../provider/ContextMenuContext";
+import {ContextMenuContext} from "../../../provider/ContextMenuContext"
 
 interface ITableRowProps {
     content: Contact
 }
 
 const TableRow: FunctionComponent<ITableRowProps> = ({content}) => {
-    const {setVisible, setPosition} = useContext(ContextMenuContext)
+    const {setVisible, setPosition, setContact} = useContext(ContextMenuContext)
     const showContextMenu = (event: React.MouseEvent<HTMLTableCellElement>) => {
+        setContact(content)
         setPosition({x: event.clientX, y: event.clientY})
         setVisible(true)
     }
@@ -26,7 +27,7 @@ const TableRow: FunctionComponent<ITableRowProps> = ({content}) => {
                 </div>
             </td>
         </tr>
-    );
-};
+    )
+}
 
-export default TableRow;
+export default TableRow

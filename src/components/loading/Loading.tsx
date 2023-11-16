@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styles from './Loading.module.sass'
 
 const Loading = () => {
@@ -8,7 +8,7 @@ const Loading = () => {
             <div/>
             <div/>
         </div>
-    );
-};
+    )
+}
 
-export default Loading;
+export default Loading

@@ -2,8 +2,6 @@ import React from 'react'
 import styles from './TableHeader.module.sass'
 
 const TableHeader = () => {
-    // TODO sort
-
     return (
         <thead className={styles.tableHeader}>
         <tr>
@@ -14,7 +12,7 @@ const TableHeader = () => {
             <th></th>
         </tr>
         </thead>
-    );
-};
+    )
+}
 
-export default TableHeader;
+export default TableHeader

@@ -1,12 +1,12 @@
 import React, {FunctionComponent} from 'react'
-import styles from './PrimaryButton.module.sass'
+import styles from './SecondaryButton.module.sass'
 
-interface IPrimaryButtonProps {
+interface ISecondaryButtonProps {
     text: string
     action: () => void
 }
 
-const PrimaryButton: FunctionComponent<IPrimaryButtonProps> = ({text, action}) => {
+const SecondaryButton: FunctionComponent<ISecondaryButtonProps> = ({text, action}) => {
     return (
         <div className={styles.button} onClick={action}>
             {text}
@@ -14,4 +14,4 @@ const PrimaryButton: FunctionComponent<IPrimaryButtonProps> = ({text, action}) =
     )
 }
 
-export default PrimaryButton
+export default SecondaryButton
