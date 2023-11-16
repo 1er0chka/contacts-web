@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Router from "./service/Router"
-import './index.css'
+import './index.module.sass'
 import {ContextMenuProvider} from "./provider/ContextMenuContext"
 
 const root = ReactDOM.createRoot(
