@@ -14,20 +14,14 @@ import {Contact} from "../../service/Types"
 interface IModalCreateContactProps {
     isVisible: boolean
     title: string
-    button: string
     close: () => void
     action: (contact: Contact) => void
     contact?: Contact
 }
-// TODO very big
-const ModalContact: FunctionComponent<IModalCreateContactProps> = ({
-                                                                       isVisible,
-                                                                       title,
-                                                                       button,
-                                                                       close,
-                                                                       action,
-                                                                       contact
-                                                                   }) => {
+
+const ModalContact: FunctionComponent<IModalCreateContactProps> = (
+    {isVisible, title, close, action, contact}) => {
+
     const name = useFormField(contact?.name || '', validateName)
     const jobTitle = useFormField(contact?.jobTitle || '', validateJobTitle)
     const mobilePhone = useFormField(contact?.mobilePhone || '+375', validatePhoneNumber)
@@ -90,13 +84,12 @@ const ModalContact: FunctionComponent<IModalCreateContactProps> = ({
                     <div className={styles.buttons}>
                         <SecondaryButton text={"Cancel"} action={closeModal}/>
                         <div className={styles.betweenButtons}/>
-                        <PrimaryButton text={button} action={checkData}/>
+                        <PrimaryButton text={title === "CREATING" ? "Create" : "Save changes"} action={checkData}/>
                     </div>
                 </div>
             </div>
             : null
     )
 }
-
 
 export default ModalContact

@@ -69,12 +69,10 @@ const ContactsPage = () => {
                     :
                     <Loading/>
             }
-            <ModalContact isVisible={isModalCreateContactVisible} title={"CREATING"} button={"Create"}
-                          close={() => setModalCreateContactVisible(false)}
-                          action={createContact}/>
-            <ModalContact isVisible={isModalEditContactVisible} title={"EDITING"} button={"Edit"}
-                          close={() => setModalEditContactVisible(false)}
-                          action={editContact} contact={contact}/>
+            <ModalContact isVisible={isModalCreateContactVisible} title={"CREATING"}
+                          close={() => setModalCreateContactVisible(false)} action={createContact}/>
+            <ModalContact isVisible={isModalEditContactVisible} title={"EDITING"}
+                          close={() => setModalEditContactVisible(false)} action={editContact} contact={contact}/>
             <ModalMessage isVisible={isModalMessageVisible} close={() => setModalMessageVisible(false)}
                           message={modalMessageText}/>
             <ModalChoice isVisible={isModalDeleteVisible} close={() => setModalDeleteVisible(false)}
